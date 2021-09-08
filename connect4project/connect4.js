@@ -68,14 +68,14 @@
        
      
     function checkWon() {
-		for (let i = 0; i < this.winArray.length; i++) {
-			let div = this.winArray[i];
+		for (let i = 0; i < winArray.length; i++) {
+			let div = winArray[i];
 			const blueWins = (div) => div.firstChild.classList.contains('p2');
 			const redWins = (div) => div.firstChild.classList.contains('p1');
-			if (this.winArray.every(blueWins)) {
+			if (winArray.every(blueWins)) {
 				return alert('blue wins!');
 			}
-			else if (this.winArray.every(redWins)) {
+			else if (winArray.every(redWins)) {
 				return alert('red wins!');
 			}
 		}
