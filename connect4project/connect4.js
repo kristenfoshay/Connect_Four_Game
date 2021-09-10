@@ -160,7 +160,7 @@ function checkWhoWon() {
 				return true;
 			}
 		};
-		if (winArray[i].some(isEmpty)) { //.some boolean; .find returns a value
+		if (winArray[i].some(isEmpty)) { 
 			console.log('Empty');
 			continue;
 		}
