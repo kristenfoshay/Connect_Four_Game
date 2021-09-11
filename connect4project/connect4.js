@@ -92,7 +92,7 @@ for (let x = 0; x < 7; x++) {
 }
 
 function handleClick(event) {
-	const x = +event.target.id;
+	const x = event.target.id;
 	let cell = document.getElementById(`${0}-${x}`);
 	let first = cell.firstChild;
 	if (first) {
@@ -166,9 +166,11 @@ function checkWhoWon() {
 		}
 		else if (winArray[i].every(blueWins)) {
 			return alert('blue wins!');
+			location.reload();
 		}
 		else if (winArray[i].every(redWins)) {
 			return alert('red wins!');
+			location.reload();
 		}
 	}
 }
