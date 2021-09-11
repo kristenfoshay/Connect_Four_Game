@@ -102,7 +102,7 @@ drop.addEventListener('click', handleClick);
 
 	function handleClick(event) {
 		
-		const x = +event.target.id;
+		const x = event.target.id;
 		let cell = document.getElementById(`${0}-${x}`);
 		let first = cell.firstChild;
 		if (first) {
@@ -177,11 +177,11 @@ drop.addEventListener('click', handleClick);
 			}
 			else if (winArray[i].every(blueWins)) {
 				alert('blue wins!');
-				new Game();
+				location.reload();
 			}
 			else if (winArray[i].every(redWins)) {
 				alert('red wins!');
-				new Game();
+				location.reload();
 			}
 		}
 	}
